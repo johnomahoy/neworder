@@ -83,7 +83,7 @@ if( $app->cfgCon("kf342")){
 					} 
 					 
 			$result = $app->addOrderItem($invoice_id,$temp_product_id[$counter],4, $product1_Price[$counter], $product1_Qty[$counter], $product1_Description[$counter], $product1_Notes[$counter]);	
-			//	echo $result;
+			//	
 					
 					//Add Content to the order custom fields
 						$grp = array('_DeliveryDate'  => $DeliveryDate,
@@ -118,8 +118,7 @@ if( $app->cfgCon("kf342")){
 			for( $i =0; $i < count( $u ); $i++ ){  
 			$temp_qtyvalue[$i] = (int) $u[$i];
 			}
-			//echo $temp_qtyvalue[$counter];
-			//	 
+				 
 				 
 			//-->Convert from String to Int
 			for( $i =0; $i < count( $product1_Price ); $i++ ){  
@@ -129,11 +128,11 @@ if( $app->cfgCon("kf342")){
 			for( $i =0; $i < count( $c ); $i++ ){  
 			$temp_pricevalue[$i] = (float) $c[$i];
 			}
-			//echo $temp_pricevalue[$counter];
+			
 			
 				  
 			
-			//$result = $app->addOrderItem(4550,$product1_ID[$counter],4,$product1_Price[$counter],$product1_Qty[$counter],$product1_Description[$counter],$product1_Notes[$counter]);
+			
 			$result = $app->addOrderItem($invoice_id,$product1_ID[$counter],4,$temp_pricevalue[$counter],$temp_qtyvalue[$counter],$product1_Description[$counter],$product1_Notes[$counter]);
 								
 				}
